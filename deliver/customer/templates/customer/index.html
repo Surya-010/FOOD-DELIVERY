@@ -1,0 +1,43 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+<style type="text/css">
+    *{
+        font-family: Lucida Handwriting;
+       
+        
+    }
+</style>
+
+<div class="container mb-5 " >
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+            <marquee scrollamount="30" id="mymarque" direction="right" onmousedown="this.stop();"
+           onmouseup="this.start();" >
+            <img src="\media\menu_images\foooo.jpg">
+        </marquee>
+        <input type="button" class="btn btn-outline-success" value="Run" name="" onclick="document.getElementById('mymarque').start();">
+         <input type="button" class="btn btn-outline-danger" value="Hold On!" name="" onclick="document.getElementById('mymarque').stop();">
+     
+          <!--   <img src="\media\menu_images\hnhn.gif"alt="funny GIF" width="50%"> -->
+
+            <h1><b >Online Food Delivery Service</b></h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-1">
+        <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
+            <h2><b>Place an Order!</b></h2>
+             <img src="\media\menu_images\huhuhuh.gif" alt="funny GIF" width="100%" align="img-ce">
+            <a  href="{% url 'order' %}" type="button" class="btn btn-outline-success mt-3"><b>Order Now!</b></a>
+           
+      
+        </div>
+    </div>
+    
+</div>
+<script>
+    $(document).ready(function(){
+        $("#mymarque")[0].stop();
+    });
+</script>
+{% endblock content %}
